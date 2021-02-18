@@ -175,8 +175,8 @@ void resourceDistribution(dataContainer* d)
     struct epoll_event events[MAXCLIENTS];
     int nfds;
     int str;
-	while( 1 )
-	{
+    while( 1 )
+    {
         if( ioctl(d->toRead, FIONREAD, &str) == -1)
             errExit("ioctl");
         
@@ -204,7 +204,7 @@ void resourceDistribution(dataContainer* d)
             else
                 checkClient(d,events, i, cd);  
         }
-	}
+   }
 }
 
 void acceptNewClient(dataContainer* d)
